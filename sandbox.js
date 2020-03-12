@@ -1,11 +1,7 @@
-const speak = function(){
-    console.log('good day!');
+const speak = function(name = 'luigi', time = 'night'){
+    console.log(`good ${time} ${name}`);
 };
 
-speak(); // can't call before declaration
-
-greet();
-
-function greet(){
-    console.log('hello there!');
-}
+speak();
+speak('alex');
+speak('mario', 'morning');
