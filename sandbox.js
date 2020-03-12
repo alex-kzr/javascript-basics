@@ -1,16 +1,11 @@
-let score = '100';
+for(let i = 0; i < 5; i++){
+    console.log('in loop:', i);
+}
+console.log('loop finished');
 
-score = Number(score);
-console.log(score + 1, typeof score);
+const names = ['alex', 'mario', 'luigi'];
 
-let result = Number('hello');
-console.log(result);
-
-let stringResult = String(50);
-console.log(stringResult, typeof stringResult)
-
-let trueBooleanResult = Boolean(100);
-let falseBooleanResult = Boolean(0);
-console.log(trueBooleanResult, typeof trueBooleanResult);
-console.log(falseBooleanResult, typeof falseBooleanResult);
-
+for(let i = 0; i < names.length; i++){
+    let html = `<div>${names[i]}</div>`;
+    console.log(html);
+}
