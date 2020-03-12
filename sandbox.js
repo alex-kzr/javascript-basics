@@ -1,40 +1,15 @@
-const grade = 'C';
+let age = 30;
 
-switch(grade){
-    case 'A':
-        console.log('you gon an A!');
-        break;
-    case 'B':
-        console.log('you gon an B!');
-        break;
-    case 'C':
-        console.log('you gon an C!');
-        break;
-    case 'D':
-        console.log('you gon an D!');
-        break;
-    case 'E':
-        console.log('you gon an E!');
-        break;
-    default:
-        console.log('not a valid grade')
+if(true){
+    let age = 40;
+    let name = 'alex';
+    console.log('inside 1s code block: ', age, name);
+
+    if(true){
+        let age = 50;
+        console.log('inside 2nd code block: ', age, name);
+        var msg = 'hello';
+    }
 }
 
-
-
-
-
-// using if else statement
-// if(grade === 'A'){
-
-// } else if(grade === 'B'){
-
-// } else if(grade === 'C'){
-    
-// } else if(grade === 'D'){
-    
-// } else if(grade === 'E'){
-    
-// } else {
-    
-// } 
+console.log('outside code block: ', age, name, msg);
