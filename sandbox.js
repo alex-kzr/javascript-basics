@@ -1,11 +1,21 @@
-const ul = document.querySelector('.people');
+let user = {
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@xxx.com',
+    location: 'berlin',
+    blogs: ['why mac & cheese rules', '10 things to make with marmite']
+}
 
-let people = ['mario', 'luigi', 'ryu', 'alex', 'chun-li'];
+console.log(user);
+console.log(user.name);
+console.log(user['name']);
+user['name'] = 'chun-li';
+console.log(user['name']);
 
-let html = ``;
+user.age = 35;
+console.log(user.age);
 
-people.forEach(person => {
-    html += `<li style="color: purple">${person}</li>`;
-});
+const key = 'location';
+console.log(user[key]);
 
-ul.innerHTML = html;
+console.log(typeof user);
