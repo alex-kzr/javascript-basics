@@ -1,24 +1,15 @@
-let user = {
-    name: 'crystal',
-    age: 30,
-    email: 'crystal@xxx.com',
-    location: 'berlin',
-    blogs: [
-        { title: 'why mac & cheese rules', likes: 30 },
-        { title: '10 things to make with marmite', likes: 50 }
-    ],
-    login: function(){
-        console.log('the user login');
-    },
-    logout: function(){
-        console.log('the user logged out');
-    },
-    logBlogs(){
-        console.log('this user has written following blogs:');
-        this.blogs.forEach(blog =>{
-            console.log(blog.title, blog.likes);
-        });
-    } 
-}
+console.log(Math);
 
-user.logBlogs();
+console.log(Math.PI);
+console.log(Math.E);
+
+const area = 7.7;
+
+console.log(Math.round(area));
+console.log(Math.floor(area));
+console.log(Math.ceil(area));
+console.log(Math.trunc(area));
+
+const random = Math.random();
+console.log(random);
+console.log(Math.round(Math.random() * 100));
