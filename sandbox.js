@@ -1,22 +1,11 @@
-// regular function
-const calcArea = function(radius){
-    return 3.14 * radius**2;    
-};
+const name = 'alex';
 
-// arrow function
-const calcVol = (area, height) => {
-    return area * height;
-};
-console.log(calcVol(calcArea(5), 5));
+// functions
+const greet = () => 'hello';
 
-const greet = name => `Hello ${name}`;
-console.log(greet('alex'));
+let resultOne = greet();
+console.log(resultOne);
 
-const bill = (products, tax) => {
-    let total = 0;
-    for(let i = 0; i < products.length; i++){
-        total += products[i] + products[i] * tax;
-    }
-    return total;
-}
-console.log(bill([10,15,30], 0.2));
+// methods
+let resultTwo = name.toUpperCase();
+console.log(resultTwo);
