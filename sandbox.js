@@ -1,13 +1,16 @@
-let age = 25;
+let score = '100';
 
-// loose comparison (different types can still be equal)
-console.log('loose', age == 25);
-console.log('loose', age == '25');
-console.log('loose', age != 25);
-console.log('loose', age != '25');
+score = Number(score);
+console.log(score + 1, typeof score);
 
-// strict comparison (different tyeps cannot be equal)
-console.log('strict', age === 25);
-console.log('strict', age === '25');
-console.log('strict', age !== 25);
-console.log('strict', age !== '25');
+let result = Number('hello');
+console.log(result);
+
+let stringResult = String(50);
+console.log(stringResult, typeof stringResult)
+
+let trueBooleanResult = Boolean(100);
+let falseBooleanResult = Boolean(0);
+console.log(trueBooleanResult, typeof trueBooleanResult);
+console.log(falseBooleanResult, typeof falseBooleanResult);
+
