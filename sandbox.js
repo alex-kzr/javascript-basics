@@ -1,16 +1,33 @@
-let email = 'alex@xxx.com';
+let radius = 10;
+const pi = 3.14;
+console.log(radius, pi);
 
-let index = email.lastIndexOf('@');
-console.log(index);
+// math operators +, -, *, /, **, %
 
-// slice - section from the string from position in first parameter to position in second parameter 
-let sliceResult = email.slice(1, index);
-console.log(sliceResult);
+console.log(10 / 2);
 
-// substr - section from string from position in first parameter to number of second parameter
-let substrResult = email.substr(1, index);
-console.log(substrResult);
+let divByModResult = radius % 3;
+console.log(divByModResult);
 
-// replace only first experession
-let replaceResult = email.replace('l','p');
-console.log(replaceResult);
+let raiseToPowerResult = pi * radius**2;
+console.log(raiseToPowerResult);
+
+// order of operation - B I D M A S
+let bidmasResult = 5 * (10-3)**2;
+console.log(bidmasResult);
+
+let likes = 10;
+likes = likes + 1;
+likes++;
+likes+=10;
+likes-=5;
+likes*=4;
+likes/=2;
+console.log(likes);
+
+// NAN - not a number
+console.log(5/ 'hello');
+console.log(5 * 'hello');
+
+let stringResult = 'the blog has ' + likes + ' likes';
+console.log(stringResult);
