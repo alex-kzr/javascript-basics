@@ -1,11 +1,11 @@
+const ul = document.querySelector('.people');
+
 let people = ['mario', 'luigi', 'ryu', 'alex', 'chun-li'];
 
-const logPerson = (person, index) => {
-    console.log(`${index} - hello ${person}`);
-}
+let html = ``;
 
-people.forEach((person, index) => {
-    console.log(index, person);
+people.forEach(person => {
+    html += `<li style="color: purple">${person}</li>`;
 });
 
-people.forEach(logPerson);
+ul.innerHTML = html;
