@@ -1,23 +1,38 @@
-const prices = [20, 10, 30, 25, 40, 80, 5];
+const points = [10, 20, 60, 40, 70, 90, 30];
 
-const salePrices = prices.map(price => price / 2);
+const result = points.reduce((accumulator, current) => {
+    if(current > 50){
+        accumulator++;
+    }
+    return accumulator;
+}, 0);
 
-console.log(salePrices);
+console.log(result);
 
-const products = [
-    {name: 'gold star', price: 20},
-    {name: 'mushroom', price: 40},
-    {name: 'green shells', price: 30},
-    {name: 'banana skin', price: 10},
-    {name: 'red shells', price: 50}
+const scores = [
+    {player: 'mario', score: 50},
+    {player: 'yoshi', score: 30},
+    {player: 'mario', score: 70},
+    {player: 'crystal', score: 60},
+    {player: 'mario', score: 50},
+    {player: 'yoshi', score: 30},
+    {player: 'mario', score: 70},
+    {player: 'crystal', score: 60},
+    {player: 'mario', score: 50},
+    {player: 'yoshi', score: 30},
+    {player: 'mario', score: 70},
+    {player: 'crystal', score: 60},
+    {player: 'mario', score: 50},
+    {player: 'yoshi', score: 30},
+    {player: 'mario', score: 70},
+    {player: 'crystal', score: 60}
 ]
 
-const saleProducts = products.map(product => {
-    if(product.price > 30){
-        return {name: product.name, price: product.price / 2}
-    }else{
-        return product
+const marioTotal = scores.reduce((acc, curr) => {
+    if(curr.player === 'mario'){
+        acc += curr.score;
     }
-});
+    return acc;
+}, 0);
 
-console.log(saleProducts, products);
+console.log(marioTotal);
