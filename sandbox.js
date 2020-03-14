@@ -1,16 +1,18 @@
-// primitive values
+const scores = [10, 30, 15, 25, 50, 40, 5];
 
-let scoreOne = 50;
-let scoreTwo = scoreOne;
-console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+const filteredScores = scores.filter(score => {
+    return score > 20;
+});
 
-scoreOne = 100;
-console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+console.log(filteredScores);
 
-// refference values
-const userOne = { name: 'ryu', age: 30};
-const userTwo = userOne;
-console.log(userOne, userTwo);
+const users = [
+    { name: 'alex', premium: true },
+    { name: 'yoshi', premium: false },
+    { name: 'mario', premium: false },
+    { name: 'chun-li', premium: true }
+];
 
-userOne.age = 40;
-console.log(userOne, userTwo);
+const premiumUsers = users.filter(user => user.premium);
+
+console.log(premiumUsers);
