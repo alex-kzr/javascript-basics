@@ -1,19 +1,27 @@
-// dates & times
-const before = new Date('March 1 2020 12:30:59');
-const now = new Date();
+const clock = document.querySelector('.clock');
 
-const diff = now.getTime() - before.getTime();
-console.log(diff);
+const addPrependigZero = number =>{
+    if(number >= 0 && number <= 9){
+        return ("0" + number).slice(-2);;
+    }else{
+        return number;
+    }
+}
 
-const secs = Math.round(diff / 1000);
-const mins = Math.round(secs / 60);
-const hours = Math.round(mins / 60);
-const days = Math.round(hours / 24);
+const tick = () => {
+    const now = new Date();
 
-console.log(days, hours, mins, secs);
+    const h = addPrependigZero(now.getHours());
+    const m = addPrependigZero(now.getMinutes());
+    const s = addPrependigZero(now.getSeconds());
 
-console.log(`the blog was written ${days} ago`);
+    html = `
+        <span>${h}</span> : 
+        <span>${m}</span> : 
+        <span>${s}</span>
+    `;
 
-// converting timestamps into date objects
-const timestamp = 1675938474990;
-console.log(new Date(timestamp));
+    clock.innerHTML = html;
+};
+
+setInterval(tick, 1000);
