@@ -1,27 +1,14 @@
-const clock = document.querySelector('.clock');
+const now = new Date();
+console.log(dateFns.isToday(now));
 
-const addPrependigZero = number =>{
-    if(number >= 0 && number <= 9){
-        return ("0" + number).slice(-2);;
-    }else{
-        return number;
-    }
-}
+//formating options
+console.log(dateFns.format(now, 'YYYY'));
+console.log(dateFns.format(now, 'MMMM'));
+console.log(dateFns.format(now, 'MMM'));
+console.log(dateFns.format(now, 'dddd'));
+console.log(dateFns.format(now, 'Do'));
+console.log(dateFns.format(now, 'dddd Do MMMM YYYY'));
 
-const tick = () => {
-    const now = new Date();
-
-    const h = addPrependigZero(now.getHours());
-    const m = addPrependigZero(now.getMinutes());
-    const s = addPrependigZero(now.getSeconds());
-
-    html = `
-        <span>${h}</span> : 
-        <span>${m}</span> : 
-        <span>${s}</span>
-    `;
-
-    clock.innerHTML = html;
-};
-
-setInterval(tick, 1000);
+// comparing dates
+const before = new Date('February 1 2020 12:00:00');
+console.log(dateFns.distanceInWords(now, before, {addSuffix: true}));
