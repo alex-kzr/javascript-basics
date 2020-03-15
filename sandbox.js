@@ -1,21 +1,19 @@
 // dates & times
+const before = new Date('March 1 2020 12:30:59');
 const now = new Date();
 
-console.log(now);
-console.log(typeof now);
+const diff = now.getTime() - before.getTime();
+console.log(diff);
 
-console.log(`getFullYear : ${now.getFullYear()}`);
-console.log(`getMonth : ${now.getMonth()}`); // zero based
-console.log(`getDate : ${now.getDate()}`);
-console.log(`getDay : ${now.getDay()}`); // zero based from Sunday
-console.log(`getHours : ${now.getHours()}`);
-console.log(`getMinutes : ${now.getMinutes()}`);
-console.log(`getSeconds : ${now.getSeconds()}`);
+const secs = Math.round(diff / 1000);
+const mins = Math.round(secs / 60);
+const hours = Math.round(mins / 60);
+const days = Math.round(hours / 24);
 
-// timestamps
-console.log(`timestamp : ${now.getTime()}`);
+console.log(days, hours, mins, secs);
 
-// date strings
-console.log(now.toDateString());
-console.log(now.toTimeString());
-console.log(now.toLocaleString());
+console.log(`the blog was written ${days} ago`);
+
+// converting timestamps into date objects
+const timestamp = 1675938474990;
+console.log(new Date(timestamp));
